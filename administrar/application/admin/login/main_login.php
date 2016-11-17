@@ -16,7 +16,7 @@ if (isset($_SESSION['username'])) {
     <style>
     
     body { 
-			background-image: url(fondoauto.png) ;
+			background-image: url(fondo.jpg) ;
 			background-position: center center;
 			background-repeat:  no-repeat;
 			background-attachment: fixed;
@@ -35,15 +35,15 @@ if (isset($_SESSION['username'])) {
       <form class="form-signin" name="form1" method="post" action="checklogin.php">
          
          <br><br><br>
-     <h4 align="center" style="color:gray;">ACCESO A LA ZONA DE ADMINISTRACION DE LA APP</h4>
+     <h4 align="center" style="color:white;">ACCESO A LA ZONA DE ADMINISTRACION DE LA APP</h4>
         <input name="myusername" id="myusername" type="text" class="form-control" placeholder="Email" autofocus>
-        <input name="mypassword" id="mypassword" type="password" class="form-control" placeholder="Contraseña">
+        <input name="mypassword" id="mypassword" type="password" class="form-control" placeholder="Contrase&ntilde;a">
         <!-- The checkbox remember me is not implemented yet...
         <label class="checkbox">
           <input type="checkbox" value="remember-me"> Remember me
         </label>
         -->
-        <button name="Submit" id="submit" class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button>
+        <button name="Submit" id="submit" class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesi&oacute;n</button>
 
         <div id="message"></div>
       </form>

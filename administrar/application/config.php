@@ -1,12 +1,12 @@
 <?php
 $host="localhost";
-$user="miasesor_app";
-$pwd="Papa020432";
-$dbname="miasesor_app";
+$user="revivcu6";
+$pwd="bZsW4T^vbGj$";
+$dbname="revivcu6_revival";
 
-$link=mysql_connect($host,$user,$pwd);
-$db = mysql_select_db($dbname,$link);
-mysql_query("SET NAMES 'utf8'");
-if(!$db) die("failed to connect to database.......");
+$link=mysqli_connect($host,$user,$pwd,$dbname);
+
+$link->set_charset("utf8");
+
 
 ?>

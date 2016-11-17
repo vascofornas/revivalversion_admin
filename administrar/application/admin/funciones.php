@@ -2,9 +2,9 @@
 include "../config.php";
 
 function get_agencia($agencia){
-$query=mysql_query("SELECT * FROM tb_agencias WHERE id_agencia = '".$agencia."'") ;
+$query=mysqli_query($link,"SELECT * FROM tb_agencias WHERE id_agencia = '".$agencia."'") ;
 $data = array();
-while($r = mysql_fetch_assoc($query)) {
+while($r = mysqli_fetch_assoc($link,$query)) {
 	$data[] = $r;
 }
 $i=0;
@@ -16,7 +16,7 @@ foreach ($data as $key) {
 return $nombre_agencia;
 }
 function contar_usuarios(){
-	$result = mysql_query("SELECT count(*) FROM members");
+	$result = mysqli_query($link,"SELECT count(*) FROM members");
 	$row = mysql_fetch_row($result);
 	$num = $row[0];
 	return $num;
