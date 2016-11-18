@@ -159,9 +159,9 @@ include 'funciones.php';?>
                           </div>
                         </div>
                         <div class="form-group"> 
-                          <label class="col-sm-3  control-label">Teléfono</label>
+                          <label class="col-sm-3  control-label">Tel.</label>
                           <div class="col-sm-9">
-                              <input type="email" class="form-control" id="txttel" placeholder="Teléfono">
+                              <input type="email" class="form-control" id="txttel" placeholder="Tel.">
                             </div>
                         </div>
                          <div class="form-group">
