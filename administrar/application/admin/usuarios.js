@@ -21,9 +21,7 @@ $(document).ready( function ()
         { "data": "nombre" },
         { "data": "apellidos" },
         { "data": "nivel_usuario" },
-        { "data": "nombre_agencia" },
-        { "data": "cargo_usuario" },
-        { "data": "licencia_usuario" },
+        { "data": "email" },
         { "data": "tel" },
         { "data": "button" },
         ]
@@ -42,10 +40,9 @@ $(document).ready( function ()
         $("#txtnombre").val("");
         $("#txtapellidos").val("");
         $("#txtnivel_usuario").val("");
-        $("#txtagencia_usuario").val("");
+      
         $("#txtemail").val("");
-        $("#txtcargo_usuario").val("");
-        $("#txtlicencia_usuario").val("");
+        
         $("#txtverified").val("");
         $("#txttel").val("");
         $("#crudmethod").val("N");
@@ -95,12 +92,11 @@ $(document).ready( function ()
       var nombre = $("#txtnombre").val();
       var apellidos = $("#txtapellidos").val();
       var nivel_usuario = $("#txtnivel_usuario").val();
-      var agencia_usuario = $("#txtagencia_usuario").val();
-      var cargo_usuario = $("#txtcargo_usuario").val();
+    
       var email = $("#txtemail").val();
       var tel = $("#txttel").val();
       var verified = $("#txtverified").val();
-      var licencia_usuario = $("#txtlicencia_usuario").val();
+     
       var crud=$("#crudmethod").val();
       if(nombre == '' || nombre == null ){
         swal("AVISO","Campo Nombre es obligatorio","warning");
@@ -117,21 +113,13 @@ $(document).ready( function ()
           $("#txtnivel_usuario").focus();
           return;
         }
-      if(agencia_usuario == '' || agencia_usuario == null ){
-          swal("AVISO","Campo Agencia del Usuario es obligatorio","warning");
-          $("#txtagencia_usuario").focus();
-          return;
-        }
+     
       if(email == '' || email == null ){
           swal("AVISO","Campo Email es obligatorio","warning");
           $("#txtemail").focus();
           return;
         }
-      if(cargo_usuario == '' || cargo_usuario == null ){
-          swal("AVISO","Campo Funcion del Usuario es obligatorio","warning");
-          $("#txtemail").focus();
-          return;
-        }
+     
       if(verified == '' || verified == null ){
           swal("AVISO","Campo Email Verificado es obligatorio","warning");
           $("#txtemail").focus();
@@ -142,11 +130,10 @@ $(document).ready( function ()
         nombre: nombre,
         apellidos:apellidos,
         nivel_usuario:nivel_usuario,
-        agencia_usuario:agencia_usuario,
+       
         email:email,
         tel:tel,
-        cargo_usuario:cargo_usuario,
-        licencia_usuario:licencia_usuario,
+     
         verified:verified,
         
         crud:crud
@@ -168,10 +155,9 @@ $(document).ready( function ()
               $("#txtnombre").val("");
               $("#txtapellidos").val("");
               $("#txtnivel_usuario").val("");
-              $("#txtagencia_usuario").val("");
+             
               $("#txtemail").val("");
-              $("#txtcargo_usuario").val("");
-              $("#txtlicencia_usuario").val("");
+            
               $("#txtverified").val("");
               $("#txttel").val("");
               
@@ -201,41 +187,37 @@ $(document).ready( function ()
       });
     });
     $(document).on("click",".btnedit",function(){
-      var id=$(this).attr("id");
-      var value = {
-        id: id
-      };
-      $.ajax(
-      {
-        url : "get_usuario.php",
-        type: "POST",
-        data : value,
-        success: function(data, textStatus, jqXHR)
+        var id=$(this).attr("id");
+        var value = {
+          id: id
+        };
+        $.ajax(
         {
-          var data = jQuery.parseJSON(data);
-          $("#crudmethod").val("E");
-          $("#txtid").val(data.id);
-          $("#txtnombre").val(data.nombre);
-          $("#txtapellidos").val(data.apellidos);
-          $("#txtnivel_usuario").val(data.nivel_usuario);
+          url : "get_usuario.php",
+          type: "POST",
+          data : value,
+          success: function(data, textStatus, jqXHR)
+          {
+            var data = jQuery.parseJSON(data);
+            $("#crudmethod").val("E");
+            $("#txtid").val(data.id);
+            $("#txtnombre").val(data.nombre);
+            $("#txtapellidos").val(data.apellidos);
+            $("#txtnivel_usuario").val(data.nivel_usuario);
+            $("#txtemail").val(data.email);
+            $("#txttel").val(data.tel);
+            $("#txtverified").val(data.verified);
 
-          $("#txtagencia_usuario").val(data.agencia_usuario);
-          $("#txtcargo_usuario").val(data.cargo_usuario);
-          $("#txtlicencia_usuario").val(data.licencia_usuario);
-          $("#txtemail").val(data.email);
-          $("#txttel").val(data.tel);
-          $("#txtverified").val(data.verified);
-
-          $("#modalcust").modal('show');
-          $("#txtnombre").focus();
-        },
-        error: function(jqXHR, textStatus, errorThrown)
-        {
-          swal("Error!", textStatus, "error");
-        }
+            $("#modalcust").modal('show');
+            $("#txtnombre").focus();
+          },
+          error: function(jqXHR, textStatus, errorThrown)
+          {
+            swal("Error!", textStatus, "error");
+          }
+        });
       });
-    });
-    $.notifyDefaults({
-      type: 'success',
-      delay: 500
-    });
+      $.notifyDefaults({
+        type: 'success',
+        delay: 500
+      });

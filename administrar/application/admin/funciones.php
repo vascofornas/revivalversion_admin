@@ -1,38 +1,25 @@
 <?php
-include "../config.php";
+
 
 function get_agencia($agencia){
-$query=mysqli_query($link,"SELECT * FROM tb_agencias WHERE id_agencia = '".$agencia."'") ;
-$data = array();
-while($r = mysqli_fetch_assoc($link,$query)) {
-	$data[] = $r;
+
+	
+	$mysqli = new mysqli('localhost', 'revivcu6', 'bZsW4T^vbGj$', 'revivcu6_revival');
+
+	$loop = mysqli_query($mysqli, "SELECT * FROM tb_agencias WHERE id_agencia = '".$agencia."'")
+	or die (mysqli_error($mysqli));
+
+
+
+	//display the results
+	while ($row_usua = mysqli_fetch_array($loop))
+	{
+		$nombre = $row_usua['nombre_agencia'];
+	}
+	return $nombre;
+
 }
-$i=0;
-foreach ($data as $key) {
-	// add new button
-	$nombre_agencia = $data[$i]['nombre_agencia'] ;
-	$i++;
-}
-return $nombre_agencia;
-}
-function contar_usuarios(){
-	$result = mysqli_query($link,"SELECT count(*) FROM members");
-	$row = mysql_fetch_row($result);
-	$num = $row[0];
-	return $num;
-}
-function contar_licencias(){
-	$result = mysql_query("SELECT count(*) FROM tb_licencias");
-	$row = mysql_fetch_row($result);
-	$num = $row[0];
-	return $num;
-}
-function contar_agencias(){
-	$result = mysql_query("SELECT count(*) FROM tb_agencias");
-	$row = mysql_fetch_row($result);
-	$num = $row[0];
-	return $num;
-}
+
 ?>
   
                         

@@ -54,10 +54,7 @@ class LoginForm extends DbConn
                     $_SESSION['nombre'] = $result['nombre']." ".$result['apellidos'];
                     $_SESSION['foto'] = $result['foto_usuario'];
                     $_SESSION['nivel'] = $result['nivel_usuario'];
-                    $_SESSION['cargo'] = $result['cargo_usuario'];
-                    $_SESSION['nivel'] = $result['nivel_usuario'];
-                    $_SESSION['agencia'] = $result['agencia_usuario'];
-                    $_SESSION['desde'] = $result['mod_timestamp'];
+                    
                     
                     
 

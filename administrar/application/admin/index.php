@@ -5,7 +5,7 @@ include 'funciones.php';?>
 <head>
   <meta charset="ISO-8859-1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>RevivalVersion</title>
+  <title>Revival Version </title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -78,11 +78,10 @@ include 'funciones.php';?>
             <section class="content-header">
            
               <IMG SRC="login/logoappauto.png" WIDTH=80 HEIGHT=80 align="center">
-            <h1>ZONA ADMINISTRACION / <?php 
-                    echo get_agencia($_SESSION['agencia'])?></h1>
+            <h1>ZONA ADMINISTRACION - Nivel Administrador: <?php echo $_SESSION['nivel']?></h1>
               <h1>
                 
-                <small>Mi Asesor Automotriz  </small>
+                <small>Revival Version </small>
               </h1>
               <ol class="breadcrumb">
                 <li><a href="index"><i class="fa fa-dashboard"></i> Portada</a></li>

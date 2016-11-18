@@ -3,7 +3,7 @@ include "../config.php";
 
 $id = $_POST['id'];
 
-mysql_query("delete from members where id= '".$id."'");
+mysqli_query($link,"delete from members where id= '".$id."'");
 if(mysql_error()){
 	$result['error']=mysql_error();
 	$result['result']=0;

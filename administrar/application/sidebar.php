@@ -17,13 +17,13 @@
                               <li>
                   <a href="usuarios.php">
                     <i class="fa fa-sitemap"></i> <span>Usuarios</span>
-                    <small class="label pull-right bg-red"><?php echo contar_usuarios();?></small>
+                    <small class="label pull-right bg-red"></small>
                   </a>
                 </li>
                             <li>
-                  <a href="licencias.php">
-                    <i class="fa fa-sitemap"></i> <span>Licencias</span>
-                    <small class="label pull-right bg-red"><?php echo contar_licencias();?></small>
+                  <a href="intro.php">
+                    <i class="fa fa-sitemap"></i> <span>Intro Slide</span>
+                    <small class="label pull-right bg-red"></small>
                   </a>
                 </li>
                 
@@ -31,115 +31,33 @@
                 
                 <li>
                   <a href="agencias.php">
-                    <i class="fa fa-sitemap"></i> <span>Agencias</span>
-                    <small class="label pull-right bg-red"><?php echo contar_agencias();?></small>
+                    <i class="fa fa-sitemap"></i> <span>Noticias</span>
+                    <small class="label pull-right bg-red"></small>
+                  </a>
+                </li>
+                <li>
+                  <a href="agencias.php">
+                    <i class="fa fa-sitemap"></i> <span>Podcasts</span>
+                    <small class="label pull-right bg-red"></small>
+                  </a>
+                </li>
+                <li>
+                  <a href="agencias.php">
+                    <i class="fa fa-sitemap"></i> <span>Preguntas</span>
+                    <small class="label pull-right bg-red"></small>
+                  </a>
+                </li>
+                 <li>
+                  <a href="agencias.php">
+                    <i class="fa fa-sitemap"></i> <span>Tracks</span>
+                    <small class="label pull-right bg-red"></small>
                   </a>
                 </li>
                     <li class="header">DATOS GENERALES</li>
                  <li>
-                  <a href="asesores.php">
-                    <i class="fa fa-group"></i> <span>Asesores</span>
-                    <small class="label pull-right bg-red">3</small>
-                  </a>
-                </li>
-                 <li>
-                  <a href="asesores.php">
-                    <i class="fa fa-shield"></i> <span>Aseguradoras</span>
-                    <small class="label pull-right bg-red">3</small>
-                  </a>
-                </li>
-                <li>
-                  <a href="asesores.php">
-                    <i class="fa fa-credit-card"></i> <span>Financieras</span>
-                    <small class="label pull-right bg-red">3</small>
-                  </a>
-                </li>
-                <li>
-                  <a href="asesores.php">
-                    <i class="fa fa-phone"></i> <span>Auxilio Vial</span>
-                    <small class="label pull-right bg-red">3</small>
-                  </a>
-                </li>
-                <li>
-                  <a href="asesores.php">
-                    <i class="fa fa-car"></i> <span>Autos nuevos/seminuevos</span>
-                    <small class="label pull-right bg-red">3</small>
-                  </a>
-                </li>
+                  
                 <li class="header">OPCIONES DE LA APP</li>
-                <li class="header">Citas a Servicio</li>
-               
                 
-                  <li>
-                  <a href="asesores.php">
-                    <i class="fa fa-car"></i> <span>Veh�culos</span>
-                    <small class="label pull-right bg-red">3</small>
-                  </a>
-                </li>
-                 <li>
-                  <a href="asesores.php">
-                    <i class="fa fa-calendar"></i> <span>A�os</span>
-                    <small class="label pull-right bg-red">3</small>
-                  </a>
-                </li>
-                <li>
-                  <a href="asesores.php">
-                    <i class="fa fa-tachometer"></i> <span>Kil�metros</span>
-                    <small class="label pull-right bg-red">3</small>
-                  </a>
-                </li>
-                 <li>
-                  <a href="asesores.php">
-                    <i class="fa fa-cubes"></i> <span>Tipos de citas</span>
-                    <small class="label pull-right bg-red">3</small>
-                  </a>
-                </li>
-                <li class="header">Tr�mites Online</li>
-                 <li>
-                  <a href="asesores.php">
-                    <i class="fa fa-cubes"></i> <span>Tipos de tr�mites</span>
-                    <small class="label pull-right bg-red">3</small>
-                  </a>
-                </li>
-                <li class="header">Costo de Servicios</li>
-                 <li>
-                  <a href="asesores.php">
-                    <i class="fa fa-car"></i> <span>Veh�culos</span>
-                    <small class="label pull-right bg-red">3</small>
-                  </a>
-                </li>
-                 <li>
-                  <a href="asesores.php">
-                    <i class="fa fa-tachometer"></i> <span>Kil�metros</span>
-                    <small class="label pull-right bg-red">3</small>
-                  </a>
-                </li>
-                 <li>
-                  <a href="asesores.php">
-                    <i class="fa fa-calendar"></i> <span>A�os</span>
-                    <small class="label pull-right bg-red">3</small>
-                  </a>
-                </li>
-                  <li class="header">DATOS RECIBIDOS</li>
-                <li>
-                  <a href="asesores.php">
-                    <i class="fa fa-calendar"></i> <span>Citas a Servicio</span>
-                    <small class="label pull-right bg-red">3</small>
-                  </a>
-                </li>
-              <li>
-                  <a href="asesores.php">
-                    <i class="fa fa-cubes"></i> <span>Tr�mites online</span>
-                    <small class="label pull-right bg-red">3</small>
-                  </a>
-                </li>
-                 <li>
-                  <a href="asesores.php">
-                    <i class="fa fa-money"></i> <span>Costo de Servicios</span>
-                    <small class="label pull-right bg-red">3</small>
-                  </a>
-                </li>
-                 
                 
                 
                    

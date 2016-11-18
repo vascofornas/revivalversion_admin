@@ -77,11 +77,10 @@ include 'funciones.php';?>
             <!-- Content Header (Page header) -->
             <section class="content-header">
             <IMG SRC="login/logoappauto.png" WIDTH=80 HEIGHT=80 align="center">
-            <h1>USUARIOS / <?php 
-                    echo get_agencia($_SESSION['agencia'])?></h1>
+            <h1>USUARIOS - Administrador Nivel: <?php echo $_SESSION['nivel']?></h1>
               <h1>
                 
-                <small>Mi Asesor Automotriz  </small>
+                <small>Revival Version  </small>
               </h1>
               <ol class="breadcrumb">
                 <li><a href="index.php"><i class="fa fa-dashboard"></i> Portada</a></li>
@@ -106,10 +105,7 @@ include 'funciones.php';?>
                         <th style="width:100px">Nombre</th>
                         <th style="width:100px">Apellidos</th>
                         <th style="width:60px">Nivel</th>
-                        <th style="width:120px">Agencia</th>
-                        <th style="width:100px">Función</th>
-                        
-                        <th style="width:80px">Licencia</th>
+                        <th style="width:60px">Email</th>
                        <th style="width:100px">Tel</th>
                         <th></th>
                       </tr>
@@ -173,83 +169,15 @@ include 'funciones.php';?>
                           <div class="col-sm-9">
                               <select class="form-control" id="txtnivel_usuario" >
                               
-                                  <option value="1" selected="selected" selected=true> Asesor </option>
-                                  <option value="3"> Administrador de Agencia </option>
-                              <option value="5"> Super Administrador </option>
+                                  <option value="1" selected="selected" selected=true> 1 </option>
+                                  <option value="3"> 3 </option>
+                              <option value="5"> 5 </option>
                               
                               </select>
                           </div>
                         </div>
-                         <div class="form-group">
-                            <label class="col-sm-3  control-label">Función de Usuario</label>
-                          <div class="col-sm-9">
-                              <select class="form-control" id="txtcargo_usuario" >
-                              
-                                  <option value="Asesor de Ventas" selected="selected" selected=true> Asesor </option>
-                                  <option value="Administrador de Agencia"> Administrador de Agencia </option>
-                              <option value="Super Administrador"> Super Administrador </option>
-                              
-                              </select>
-                          </div>
-                        </div>
-                         <div class="form-group">
-                            <label class="col-sm-3  control-label">Agencia de Usuario</label>
-                          <div class="col-sm-9">
-                              <select class="form-control" id="txtagencia_usuario" >
-                             
-                              
-                              <?php
-include "../config.php";
-$query=mysql_query("SELECT * FROM tb_agencias") ;
-$data = array();
-while($r = mysql_fetch_assoc($query)) {
-	$data[] = $r;
-}
-$i=0;
-foreach ($data as $key) {
-		// add new button
-	$data[$i]['button'] ;
-	echo '<option value="'.$data[$i]['id_agencia'].'">'.$data[$i]['nombre_agencia'].'</option>';
-	$i++;
-}
-$datax = array('data' => $data);
-echo json_encode($datax);
-?>
-                              
-                              
-                              
-                              </select>
-                          </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3  control-label">Licencia de Usuario</label>
-                          <div class="col-sm-9">
-                              <select class="form-control" id="txtlicencia_usuario" >
-                             
-                              
-                              <?php
-include "../config.php";
-$query=mysql_query("SELECT * FROM tb_licencias") ;
-$data = array();
-while($r = mysql_fetch_assoc($query)) {
-	$data[] = $r;
-}
-$i=0;
-foreach ($data as $key) {
-		// add new button
-	$data[$i]['button'] ;
-	echo '<option value="'.$data[$i]['id_licencia'].'">'.$data[$i]['cod_licencia'].'</option>';
-	$i++;
-}
-$datax = array('data' => $data);
-echo json_encode($datax);
-?>
-                              
-                              
-                              
-                              </select>
-                          </div>
-                        </div>
+                         
+                       
                         
                         <div class="form-group"> 
                           <label class="col-sm-3  control-label"></label>

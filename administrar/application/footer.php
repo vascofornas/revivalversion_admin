@@ -2,7 +2,7 @@
             <div class="pull-right hidden-xs">
               <b>Version</b> 1.0
             </div>
-            <strong>Copyright &copy; 2016 <a href="http://miasesorautomotriz.com">Mi Asesor Automotriz App Móvil</a>.</strong> All rights reserved.
+            <strong>Copyright &copy; 2016 <a href="http://miasesorautomotriz.com">Revival Version</a>.</strong> All rights reserved.
           </footer>
 
           <!-- Control Sidebar -->

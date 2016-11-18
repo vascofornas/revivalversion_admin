@@ -24,3 +24,4 @@
 [27-Oct-2016 16:22:29 America/Mexico_City] PHP Fatal error:  Call to undefined function contar_usuarios() in /home/miasesor/public_html/administrar/application/sidebar.php on line 20
 [27-Oct-2016 17:19:28 America/Mexico_City] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/miasesor/public_html/administrar/application/admin/data_agencias.php on line 7
 [27-Oct-2016 18:00:35 America/Mexico_City] PHP Fatal error:  Call to undefined function contar_usuarios() in /home/miasesor/public_html/administrar/application/sidebar.php on line 20
+[11-Nov-2016 14:24:35 America/Mexico_City] PHP Fatal error:  Call to undefined function contar_usuarios() in /home/miasesor/public_html/administrar/application/sidebar.php on line 20
